@@ -14,14 +14,14 @@ const generateUsers = (amount)=>{
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-   
+
      await queryInterface.bulkInsert('users', generateUsers(20), {});
-    
+
   },
 
   async down (queryInterface, Sequelize) {
-    
+
       await queryInterface.bulkDelete('users', null, {});
-     
+
   }
 };
